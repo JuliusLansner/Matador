@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Game -> FileIO: string[] data =  readFileData()
+
+Game -> Board : new(data)
+Board -> Board : createFields()
+Board -> Field : new()
+
+@enduml

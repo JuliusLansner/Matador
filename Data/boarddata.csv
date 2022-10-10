@@ -1,0 +1,41 @@
+ID, FieldType, Label, Cost, Income, seriesID
+1,startfelt,Start,0,4000,0
+2,plot,Rødovrevej,1200,50,1
+3,lykkefelt,Prøv Lykken,0,0,2
+4,plot,Hvidovrevej,1200,50,1
+5,tax,Income Tax,4000,0,13
+6,rederi,DSB Halsskov,2000,500,3
+7,plot,Roskildevej,2000,100,4
+8,lykkefelt,Prøv Lykken,0,0,2
+9,plot,Valby Langgade,2000,100,4
+10,plot,Allégade,2400,150,4
+11,jail,I fængsel,0,0,5
+12,plot,Frederiksberg alle,2800,200,6
+13,brewery,Coca Cola,3000,500,7
+14,plot,Bülowsvej,2800,200,6
+15,plot,Gl. Kongevej,3200,250,6
+16,rederi,DFDS,2000,500,3
+17,plot,Bernstorffsvej,3600,300,8
+18,lykkefelt,Prøv Lykken,0,0,2
+19,plot,Hellerupvej,3600,300,8
+20,plot,Strandvejen,4000,350,8
+21,parking,Parking Lot,0,0,14
+22,plot,Trianglen,4000,300,9
+23,lykkefelt,Prøv Lykken,0,0,2
+24,plot,Østerbrogade,4000,300,9
+25,plot,Grønningen,4000,300,9
+26,rederi,SFL Færgerne,2000,500,3
+27,plot,Bredgade,5200,450,10
+28,plot,Kgs. Nytorv,5200,450,10
+29,brewery,Faxe Kondi,3000,500,7
+30,plot,Østergade,5600,500,10
+31,jail,DE FÆNGSLES,0,0,5
+32,plot,Amagertorv,5000,550,11
+33,plot,Vimmelskaftet,6000,550,11
+34,lykkefelt,Prøv Lykken,0,0,2
+35,plot,Nygade,6400,600,11
+36,rederi,DSB Århus,2000,500,3
+37,lykkefelt,Prøv Lykken,0,0,2
+38,plot,Frederiksberggade,7000,700,12
+39,extraTax,Extra State Tax,2000,0,13
+40,plot,Rådhuspladsen,8000,1000,12

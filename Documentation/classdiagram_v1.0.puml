@@ -1,0 +1,17 @@
+@startuml
+class Game
+class Player
+class FileIO
+
+Game : - File fileIO;
+Game : - TextUI textUI;
+Game : + ArrayList<Player> players
+Game : + void gameSetup()
+Game : - createPlayers(ArrayList<String> data)
+
+Game *-- FileIO
+Game *-- Player
+
+
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+
+participant Game as game
+participant Dice as dice
+participant Player as player
+participant Board as board
+
+game -> game : runGameLoop()
+game -> game : throwAndMove()
+game -> dice : int result = rollDiceSum()
+game -> player: int newPosition = updatePosition( result )
+game -> board : Field f = getField( newPosition )
+game -> game : landAndAct(f)
+
+@enduml

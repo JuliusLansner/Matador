@@ -1,0 +1,12 @@
+@startuml
+Field : + Field(ID, label, cost, income)
+Field : - String label
+Field : - int ID
+Field : - int cost
+Field : - int income
+Field : + String toString()
+Field : + String onLand()
+Field : + String processResponse()
+Field : # String onAccept()
+Field : # String onReject()
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+'autonumber
+participant Game as game
+participant TextUI as ui
+participant Player as player
+participant Field  as field
+
+game -> game : landAndAct(f)
+game -> field : String optionMessage = f.onLand(player)
+field -> field : setOption()
+game -> ui : String choice = getUserInput( optionMessage )
+game -> field : String stateMessage = f.processesChoice(player, choice )
+alt response (A)ccept
+    field -> field : onAccept(player)
+else response (R)eject
+    field -> field : onReject(player)
+    end
+field --> game : String stateMessage ie. "user chose to buy plot"
+game -> ui : displayMessage( stateMessage )
+@enduml

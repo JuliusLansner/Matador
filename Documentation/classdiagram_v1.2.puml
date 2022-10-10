@@ -1,0 +1,78 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Main
+class Game
+class FileIO
+class TextUI
+class Player
+class BankAccount
+class Board
+class Field
+class Dice
+
+
+Main : - static Game game
+Main : + static void main()
+
+Game : - File fileIO;
+Game : - TextUI textUI;
+Game : - ArrayList<Player> players
+Game : + void gameSetup()
+
+Game : - void createPlayers(ArrayList<String> data)
+
+FileIO : + ArrayList<String> readGameData()
+FileIO : + void writeGameData(ArrayList<Player> players)
+FileIO : + String[] readBoardData()
+
+TextUI : + String getUserInput(String msg)
+TextUI : + int getUserInput(String msg, ArrayList<String> options)
+TextUI : + ArrayList<String> getUserInput(String msg, int iterations)
+TextUI : - Scanner scan
+
+
+
+Player : + Player(String name, int amount)
+Player : - String name
+Player : - int position
+Player : + String getName()
+Player : + void setName(String name)
+Player : + void buy(int cost)
+Player : + int getAmount()
+Player : + String toString()
+Player : + void updatePosition()
+
+BankAccount : -int balance
+BankAccount : +BankAccount(int startAmount)
+BankAccount : +void doTransaction(int amount)
+BankAccount : +int getBalance()
+BankAccount : +String toString()
+
+Field : + Field(ID, label, cost, income, seriesID, owner)
+Field : - String label
+Field : - int ID
+Field : - int cost
+Field : - int income
+Field : - int seriesID
+Field : - Player owner
+Field : + String toString()
+
+Dice : + int rollDice()
+Dice : - boolean isDouble()
+
+Board : - Field[] fields
+Board : + Board(String [] data)
+Board : - void createFields(String [] data)
+Board : + Field getField(int id)
+Board *-- Dice
+Main *-- Game : has-a
+Game *-- FileIO : has-a
+Game *-- TextUI : has-a
+Game *-- "2...6" Player
+Player *-- BankAccount
+Game *-- Board : has-a
+Board *-- "40" Field
+
+
+@enduml

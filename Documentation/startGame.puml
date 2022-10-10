@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:create new game;
+if (if there is any game data) then (succes)
+
+   else (failure)
+     :start dialog to get player names;
+
+
+      endif
+
+:create players;
+
+
+stop
+
+@enduml
